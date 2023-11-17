@@ -1,8 +1,8 @@
-# node-typescript-starter
+# Node-TypeScript Starter
 A starter Node Express project with Typescript and Docker
 
-## Docker compose setup for development environment
+## Development
 `docker compose -f docker-compose-dev.yml up`
 
-## Docker compose setup for production environment
+## Production
 `docker compose up`
