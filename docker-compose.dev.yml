@@ -4,11 +4,15 @@ services:
   api:
     build:
       context: .
-      target: production
+      target: development
+    volumes:
+      - ./:/user/src/app
+      - /user/src/app/node_modules
     ports:
       - 4000:4000
     depends_on:
       - db
+    command: npm run dev
 
   db:
     image: postgres:14.5
