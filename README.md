@@ -1,6 +1,6 @@
-# Node-TypeScript Starter
+# Node-TypeScript-Postgres Starter
 
-A starter Node Express project with Typescript and Docker
+A dockerized starter Node Express project with Typescript and Postgres
 
 ## Setup
 
