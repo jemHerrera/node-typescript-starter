@@ -1,6 +1,6 @@
-# Node-TypeScript-Postgres Starter
+# Node-TypeScript Starter with Postgres
 
-A dockerized starter Node Express project with Typescript and Postgres
+A dockerized starter Node-Express-TS project with Postgres. Uses MikroORM.
 
 ## Setup
 
