@@ -25,5 +25,15 @@ services:
     volumes:
       - db-volume:/var/lib/postgresql/data
 
+  pgadmin:
+    image: dpage/pgadmin4:2023-09-20-2
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=sinchemy@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    volumes:
+      - ./pgadmin-servers.json:/pgadmin4/servers.json
+    ports:
+      - 5002:80
+
 volumes:
   db-volume:
