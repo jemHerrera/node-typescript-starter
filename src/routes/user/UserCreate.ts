@@ -19,15 +19,13 @@ export const userCreate = async (
   res: express.Response
 ) => {
   try {
-    const em = DI.em.fork();
+    const { em } = DI;
 
     const invalidRequestBody = !UserCreateRequest.safeParse(req.body).success;
 
     if (invalidRequestBody) return res.sendStatus(406);
 
     const { email, password, username } = req.body;
-
-    const users = await em.find(User, {});
 
     const existingUser = !!(await em.findOne(User, {
       $or: [{ email }, { username }],
