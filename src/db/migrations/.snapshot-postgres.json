@@ -35,8 +35,17 @@
           "length": 0,
           "mappedType": "datetime"
         },
-        "email_address": {
-          "name": "email_address",
+        "username": {
+          "name": "username",
+          "type": "varchar(255)",
+          "unsigned": false,
+          "autoincrement": false,
+          "primary": false,
+          "nullable": false,
+          "mappedType": "string"
+        },
+        "email": {
+          "name": "email",
           "type": "varchar(255)",
           "unsigned": false,
           "autoincrement": false,
@@ -59,10 +68,19 @@
       "indexes": [
         {
           "columnNames": [
-            "email_address"
+            "username"
           ],
           "composite": false,
-          "keyName": "account_email_address_unique",
+          "keyName": "account_username_unique",
+          "primary": false,
+          "unique": true
+        },
+        {
+          "columnNames": [
+            "email"
+          ],
+          "composite": false,
+          "keyName": "account_email_unique",
           "primary": false,
           "unique": true
         },

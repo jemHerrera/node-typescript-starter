@@ -2,10 +2,13 @@ import { Entity, Property } from "@mikro-orm/core";
 import { BaseEntity } from "./_lib/BaseEntity";
 
 @Entity({ tableName: "account" })
-export class Account extends BaseEntity {
+export class User extends BaseEntity {
   @Property({ unique: true })
-  emailAddress!: string;
+  username!: string;
 
-  @Property({ type: "string" })
+  @Property({ unique: true })
+  email!: string;
+
+  @Property()
   password!: string;
 }

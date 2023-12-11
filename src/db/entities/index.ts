@@ -1,7 +1,7 @@
-import { Account } from "./Account";
+import { User } from "./User";
 
-export * from "./Account";
+export * from "./User";
 
-const entities: any[] = [Account];
+const entities: any[] = [User];
 
 export default entities;

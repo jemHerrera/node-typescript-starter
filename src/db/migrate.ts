@@ -4,9 +4,7 @@ import mikroOrmConfig from "./_config/mikroOrmConfig";
 
 export async function handler() {
   try {
-    const config = { ...mikroOrmConfig };
-
-    const orm = await MikroORM.init(config);
+    const orm = await MikroORM.init(mikroOrmConfig);
 
     const migrator = orm.getMigrator();
 
@@ -14,7 +12,7 @@ export async function handler() {
 
     await orm.close(true);
 
-    console.log("Migrations successfully executed.");
+    console.log("Migration complete.");
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
